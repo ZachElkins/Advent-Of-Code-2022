@@ -15,3 +15,7 @@ class FileReader:
         with open(os.path.join(path, filename), 'r') as f:
             lines = [line for line in f]
         return lines
+
+    @staticmethod
+    def read_line(path=".", filename="input.txt"):
+        return FileReader.read_lines(path, filename)[0]
